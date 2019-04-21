@@ -1,0 +1,45 @@
+package com.pjw.iw.producer.consumer.wait;
+
+import java.util.Queue;
+
+import com.pjw.iw.producer.consumer.Item;
+
+/**
+ * @author pangjiawei - [Created on 2019/4/2 11:45]
+ */
+public class Consumer implements Runnable {
+
+    private final Object mutex;
+
+    private Queue<Item> items;
+
+    public Consumer(Object mutex, Queue<Item> items) {
+        this.mutex = mutex;
+        this.items = items;
+    }
+
+    public void consume() throws InterruptedException {
+        while (true) {
+            synchronized (mutex) {
+                while (items.isEmpty()) {
+                    mutex.wait();
+                }
+
+                items.poll();
+                System.out.println(Thread.currentThread().getName() + " consume, size: " + items.size());
+                mutex.notifyAll();
+
+                Thread.sleep(500);
+            }
+        }
+    }
+
+    @Override
+    public void run() {
+        try {
+            consume();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
