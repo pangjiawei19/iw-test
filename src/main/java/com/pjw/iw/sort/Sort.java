@@ -178,7 +178,6 @@ public class Sort {
                 nums[right] = nums[left];
                 nums[left] = tmp;
             }
-
         }
 
         int tmp = nums[left];
