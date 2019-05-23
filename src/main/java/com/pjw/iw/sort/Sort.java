@@ -135,7 +135,7 @@ public class Sort {
 
 
     public static void main(String[] args) {
-        List<Integer> list = IntStream.range(1, 50).boxed().collect(Collectors.toList());
+        List<Integer> list = IntStream.range(1, 10).boxed().collect(Collectors.toList());
         Collections.shuffle(list);
         int[] array = new int[list.size()];
         for (int i = 0; i < array.length; i++) {
