@@ -2,7 +2,7 @@ package com.pjw.iw.magic;
 
 import java.util.Scanner;
 
-public class U592p1 {
+public class U592p2 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

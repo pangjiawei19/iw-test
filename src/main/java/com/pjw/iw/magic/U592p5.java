@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class U592p7 {
+public class U592p5 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

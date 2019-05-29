@@ -3,7 +3,7 @@ package com.pjw.iw.magic;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class U592p8 {
+public class U592p51 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

@@ -2,7 +2,7 @@ package com.pjw.iw.magic;
 
 import java.util.Scanner;
 
-public class U592p3 {
+public class U592p6 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -22,7 +22,7 @@ public class U592p3 {
         long num = 0;
         for (int i = 2; i < n; i++) {
             num = (a + b) % 1000000;
-            a = b % 1000000;
+            a = b;
             b = num;
         }
 

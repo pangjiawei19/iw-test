@@ -1,6 +1,6 @@
 package com.pjw.iw.magic;
 
-public class Test2 {
+public class TestPower2 {
 
     public static void main(String[] args) {
         for (int i = 1; i <= 32; i++) {
@@ -8,11 +8,25 @@ public class Test2 {
                 System.out.println(i);
             }
         }
-
-//        System.out.println(isPower(8));
     }
 
-    public static boolean isPower22(int n) {
+    public static boolean isPower(int n) {
+        if (n <= 0) {
+            return false;
+        }
+
+        if (n == 1) {
+            return true;
+        }
+
+        if (n % 2 != 0) {
+            return false;
+        } else {
+            return isPower(n >> 1);
+        }
+    }
+
+    public static boolean isPower1(int n) {
         if (n <= 0) {
             return false;
         }
@@ -37,22 +51,6 @@ public class Test2 {
             } else {
                 return false;
             }
-        }
-    }
-
-    public static boolean isPower(int n) {
-        if (n <= 0) {
-            return false;
-        }
-
-        if (n == 1) {
-            return true;
-        }
-
-        if (n % 2 != 0) {
-            return false;
-        } else {
-            return isPower(n >> 1);
         }
     }
 }
